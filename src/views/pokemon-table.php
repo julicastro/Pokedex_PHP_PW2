@@ -13,7 +13,7 @@
         <?php
         //Hay q especificar bien los atrivutos
         //Esto seria CON base de datos
-        /*foreach ($data["pokedex"] as $pokemon) {
+        foreach ($data["pokedex"] as $pokemon) {
             echo '<tr>
                                 <td>' . $pokemon['image'] . '</td>
                                 <td>' . $pokemon['name'] . '</td>
@@ -22,7 +22,7 @@
                                 <button type="submit" class="btn btn-outline-primary">Modificar</button>
                                 <button type="submit" class="btn btn-outline-primary">Eliminar</button>
                             </tr>';
-        }*/
+        }
 
         //========== EJEMPLO SIN BASE DE DATOS========================
         echo '<tr>
