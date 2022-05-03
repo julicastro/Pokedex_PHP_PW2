@@ -13,18 +13,41 @@
         <?php
         //Hay q especificar bien los atrivutos
         //Esto seria CON base de datos
-        foreach ($data["pokedex"] as $pokemon) {
+
+        $conn = mysqli_connect("localhost", "root", "", "db_pokedex");
+        $sql = "SELECT * FROM pokemon";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+			while ($row = $result->fetch_assoc()) {
+                echo '<tr>
+                                <td>' . $row['imagen'] . '</td>
+                                <td>' . $row['nombre'] . '</td>
+                                <td>' . $row['tipo'] . '</td>
+                                <td>' . $row['numero'] . '</td>
+                                <td> <button type="submit" class="btn btn-outline-primary">Modificar</button> </td>
+                                <td> <button type="submit" class="btn btn-outline-primary">Eliminar</button> </td>
+                      </tr>';
+
+
+		}$conn->close();
+
+
+
+
+       /* foreach ($result["pokemon"] as $pokemon) {
             echo '<tr>
-                                <td>' . $pokemon['image'] . '</td>
-                                <td>' . $pokemon['name'] . '</td>
-                                <td>' . $pokemon['tipe'] . '</td>
-                                <td>' . $pokemon['number'] . '</td>
+                                <td>' . $row['imagen'] . '</td>
+                                <td>' . $row['nombre'] . '</td>
+                                <td>' . $row['tipo'] . '</td>
+                                <td>' . $row['numero'] . '</td>
                                 <button type="submit" class="btn btn-outline-primary">Modificar</button>
                                 <button type="submit" class="btn btn-outline-primary">Eliminar</button>
                             </tr>';
         }
-
+*/
         //========== EJEMPLO SIN BASE DE DATOS========================
+     /*
         echo '<tr>
                                 <td>  img  </td>
                                 <td>  Squirtle  </td>
@@ -32,8 +55,10 @@
                                 <td> 123  </td>
                                 <td> <button type="submit" class="btn btn-outline-primary">Modificar</button> </td>
                                 <td> <button type="submit" class="btn btn-outline-primary">Eliminar</button> </td>
+
               </tr>';
-        ?>
+     */
+     ?>
 
     </table>
 </div>

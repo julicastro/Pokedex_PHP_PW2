@@ -28,7 +28,7 @@ class MySqlDatabase
     }
 
     private function connect() {
-        $conn = mysqli_connect("localhost", "root", "root", "db_pokedex");
+        $conn = mysqli_connect($this->servername, $this->username, $this->password, $this->database);
         if (!$conn) {
             die('Connection failed: ' . mysqli_connect_error());
         }

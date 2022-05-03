@@ -4,12 +4,7 @@ class Configuration {
 
     
     function getDatabase() {
-        return new MySqlDatabase(
-            "localhost",
-            "db_pokedex",
-            "root",
-            "root"
-        );
+        return new MySqlDatabase("localhost","root","","db_pokedex");
 
     }
 

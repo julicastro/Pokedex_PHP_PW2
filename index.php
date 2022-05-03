@@ -3,8 +3,8 @@
 include_once('src/database.php');
 include_once("src/Configuration.php");
 $configuration = new Configuration();
-//probando sin base de datos
-//conectarAMySQL();
+
+conectarAMySQL();
 $configuration->getDatabase();
 
 
