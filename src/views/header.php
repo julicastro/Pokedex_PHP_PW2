@@ -11,12 +11,12 @@
     <div class="col-4">
         <!--Formulario de ingreso de sesion-->
         <!--Hay que agregar el archivo donde hara accion-->
-        <form class="d-flex flex-nowrap" method="post" action="ejemploPost.php">
+        <form class="d-flex flex-nowrap" method="post" action="indexLogeado.php">
             <div class="p-1">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="exampleInputEmail1" name="username" value="">
             </div>
             <div class="p-1">
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="">
             </div class="">
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>

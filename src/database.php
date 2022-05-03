@@ -14,10 +14,11 @@
 		}
 		echo "Connected successfully";
 
-
+/*
 		$sql = "SELECT * FROM pokemon";
 
 		$result = $conn->query($sql);
+
 
 		if ($result->num_rows > 0) {
 			// output data of each row
@@ -28,7 +29,8 @@
 			echo "0 results";
 		}
 		$conn->close();
-	}
+*/
+}
 
 
 

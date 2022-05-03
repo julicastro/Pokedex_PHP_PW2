@@ -7,14 +7,14 @@
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Numero</th>
-            
+            <th class="text-center">Acciones</th>
         </tr>
 
 
         <?php
         //Hay q especificar bien los atrivutos
         //Esto seria CON base de datos
-    //=======HARCODEADO===========
+        //=======HARCODEADO===========
         $conn = mysqli_connect("localhost", "root", "", "db_pokedex");
         $sql = "SELECT * FROM pokemon";
         $result = $conn->query($sql);
@@ -28,10 +28,11 @@
                                 <td>' . $row['nombre'] . '</td>
                                 <td>' . $row['tipo'] . '</td>
                                 <td>' . $row['numero'] . '</td>
+                                <td><button type="submit" class="btn btn-outline-primary">Modificar</button></td>
+                                <td><button type="submit" class="btn btn-outline-primary">Eliminar</button></td>
                             </tr>';
         }$conn->close();
-     ?>
+        ?>
 
     </table>
 </div>
-
