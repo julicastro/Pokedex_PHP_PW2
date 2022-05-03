@@ -1,6 +1,9 @@
-<?php 
+<?php
 
-include_once('src/database.php'); 
+include_once('src/database.php');
+include_once("src/Configuration.php");
+$configuration = new Configuration();
+
 
 ?>
 
@@ -16,17 +19,18 @@ include_once('src/database.php');
 </head>
 
 <body>
-    <h1>Hola</h1>
+    <h1>Lista de Pokemones</h1>
 
 
     <?php
-    conectarAMySQL()
+    conectarAMySQL();
+    $configuration->getDatabase();
 
 
     ?>
 
     <div class="pokemon-table">
-        <div >
+        <div>
 
         </div>
     </div>

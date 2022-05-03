@@ -6,7 +6,6 @@ class MySqlDatabase
     private $username;
     private $password;
     private $database;
-
     private $conn;
 
     public function __construct($servername, $username, $password, $database) {
@@ -28,12 +27,31 @@ class MySqlDatabase
     }
 
     private function connect() {
-        $conn = mysqli_connect($this->servername, $this->username, $this->password, $this->database);
+        $conn = mysqli_connect("localhost", "root", "root", "db_pokedex");
         if (!$conn) {
             die('Connection failed: ' . mysqli_connect_error());
         }
         $this->conn = $conn;
+        $this->querySelect($conn);
     }
+
+    private function querySelect($conn){
+        $sql = "SELECT * FROM pokemon";
+		
+		
+
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) {
+			// output data of each row
+			while ($row = $result->fetch_assoc()) {
+				echo "id: " . $row["id"] . " - Name: " . $row["nombre"];
+			}
+		} else {
+			echo "0 results";
+		}
+    }
+
 
     private function disconnect() {
         mysqli_close($this->conn);
