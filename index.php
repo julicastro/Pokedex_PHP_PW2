@@ -3,41 +3,22 @@
 include_once('src/database.php');
 include_once("src/Configuration.php");
 $configuration = new Configuration();
+//probando sin base de datos
+//conectarAMySQL();
+//$configuration->getDatabase();
+
+
+include_once ("src/views/head.php");
+include_once ("src/views/header.php");
+include_once ("src/views/nav.php");
+
+include_once ("src/views/pokemon-table.php");
+
+include_once ("src/views/footer.php");
+
 
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Lista de Pokemones</h1>
-
-
-    <?php
-    conectarAMySQL();
-    $configuration->getDatabase();
-
-
-    ?>
-
-    <div class="pokemon-table">
-        <div>
-
-        </div>
-    </div>
-
-
-
-
-</body>
-
-</html>
