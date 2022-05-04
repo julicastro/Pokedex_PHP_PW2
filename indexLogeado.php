@@ -13,5 +13,5 @@ include_once ("src/views/headerLogueado.php");
 include_once ("src/views/nav.php");
 
 include_once ("src/views/pokemon-tableLogeado.php");
-
+include_once ("src/views/botonAgregar.php");
 include_once ("src/views/footer.php");

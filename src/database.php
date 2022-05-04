@@ -2,6 +2,7 @@
 
 	function conectarAMySQL()
 	{
+
 		$servername = "localhost";
 		$database = "db_pokedex";
 		$username = "root";
@@ -14,7 +15,8 @@
 		}
 		echo "Connected successfully";
 
-/*
+
+		/*
 		$sql = "SELECT * FROM pokemon";
 
 		$result = $conn->query($sql);
@@ -30,6 +32,13 @@
 		}
 		$conn->close();
 */
+/*
+		$sql = "CREATE DATABASE db_pokedex";
+		if($conn->query($sql) === true){
+			echo "Base de datos creada correctamente";
+		}else{
+			die("error al crear la base de datos: " . $conn->error);
+		}*/
 }
 
 
