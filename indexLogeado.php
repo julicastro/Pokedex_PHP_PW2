@@ -1,17 +1,17 @@
 <?php
 
-include_once('src/database.php');
-include_once("src/Configuration.php");
+include_once('helper/database.php');
+include_once("config/Configuration.php");
 $configuration = new Configuration();
 
 conectarAMySQL();
 $configuration->getDatabase();
 
 
-include_once("src/views/head.php");
-include_once("src/views/headerLogueado.php");
-include_once("src/views/nav.php");
+include_once("view/head.php");
+include_once("view/headerLogueado.php");
+include_once("view/nav.php");
 
-include_once("src/views/pokemon-tableLogeado.php");
-include_once("src/views/botonAgregar.php");
-include_once("src/views/footer.php");
+include_once("view/pokemon-tableLogeado.php");
+include_once("view/botonAgregar.php");
+include_once("view/footer.php");

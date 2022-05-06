@@ -1,5 +1,5 @@
 <?php
-include_once('MySqlDatabase.php');
+include_once('helper/MySqlDatabase.php');
 class Configuration {
 
     function getDatabase() {

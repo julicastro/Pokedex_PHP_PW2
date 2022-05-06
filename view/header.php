@@ -11,7 +11,7 @@
     <div class="col-4">
         <!--Formulario de ingreso de sesion-->
         <!--Hay que agregar el archivo donde hara accion-->
-        <form class="d-flex flex-nowrap" method="post" action="validar.php">
+        <form class="d-flex flex-nowrap" method="post" action="./indexLogeado.php">
             <div class="p-1">
                 <input type="text" class="form-control" id="exampleInputEmail1" name="username" value="">
             </div>
