@@ -1,6 +1,6 @@
 <header class="container d-flex">
     <div class="col-1">
-        <img src="..." alt="...">
+        <img src="./img/pokebolaPNG.png" alt="Logo" width="3rem">
     </div>
     <div class="col-2">
         <h3>Logo</h3>

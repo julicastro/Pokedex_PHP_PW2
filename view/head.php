@@ -10,6 +10,5 @@
     <!-- Google Icon -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet">
     <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
-    <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background: bisque;font-family: cursive;">

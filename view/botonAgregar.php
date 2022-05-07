@@ -1,4 +1,4 @@
-<div class="container text-center">
-    <button type="button" class="btn btn-primary btn-block">Nuevo pokemon</button>
+<div class="container-fluid d-grid gap-2">
+    <button class="btn btn-outline-dark" type="button">Nuevo pokemon</button>
 </div>
 
