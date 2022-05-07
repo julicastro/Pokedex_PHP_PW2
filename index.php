@@ -1,10 +1,8 @@
 <?php
 
-include_once('helper/database.php');
 include_once("config/Configuration.php");
 $configuration = new Configuration();
 
-conectarAMySQL();
 $configuration->getDatabase();
 
 
