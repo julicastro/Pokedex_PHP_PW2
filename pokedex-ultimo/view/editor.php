@@ -27,20 +27,26 @@
     </header>
 
     <section class="container row ">
+
             <div class="input-group mb-3">
-                <input type="text" class="form-control mx-1" placeholder="Nombre del Pokemon">
-                <input type="text" class="form-control mx-1" placeholder="Tipo de Pokemon">
+                <input type="text" class="form-control mx-1" placeholder="Nombre del Pokemon" name="nombre" value="<?= $pokemon[1] ?>">
+                <input type="text" class="form-control mx-1" placeholder="Tipo de Pokemon"  name="tipo" value="<?= $pokemon[3] ?>">
             </div>
             <label for="basic-url" class="form-label mx-1">URL de la imagen</label>
             <div class="input-group mb-3">
                 <span class="input-group-text mx-1" id="basic-addon3">https://ejemplo.com/</span>
-                <input type="text" class="form-control" id="basic-url" placeholder="URL">
+                <input type="text" class="form-control" id="basic-url" placeholder="URL" name="imagen" value="<?= $pokemon[4] ?>">
             </div>
 
             <div class="input-group mb-3 mx-1">
                 <span class="input-group-text mx-1">Numero</span>
-                <input type="text" class="form-control mx-1" placeholder="Numero de Pokemon" >
+                <input type="text" class="form-control mx-1" placeholder="Numero de Pokemon" name="numero" value="<?= $pokemon[2] ?>">
             </div>
+            <div class="input-group mb-3 mx-1">
+                <input type="text" class="form-control mx-1" placeholder="Descripcion" name="descripcion" value="<?= $pokemon[5] ?>" >
+            </div>
+            <input class="bnt btn-dark rounded" type="submit" value="Editar">
+        
         </div>
 
 

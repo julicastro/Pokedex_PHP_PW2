@@ -2,10 +2,16 @@
 require_once '../modelos/Pokemon.clase.php';
 require_once '../dao/Pokemon.dao.php';
 require_once '../pokemon/user.php';
+/*
+$nombre=$_POST["usuario"];
+$password=$_POST["password"];
 
-$login= login();
- if($login==true /*&& $login->getrole()=="admin"*/){ 
 
+$login= new User();
+$login->login($nombre,$password);
+
+ if($login==true){ 
+*/
 	switch ($_GET['a']) {
 		case 'ingr':
 			$r = new Pokemon();
@@ -34,8 +40,8 @@ $login= login();
 	header('Location: ../pokemon/');
 	
 
-
+/*
 }else {
 	header('Location: ../pokemon/login.php');
 }
-
+*/

@@ -51,14 +51,9 @@
             </thead>
             <thead>
                 <?php
-
-                //Hay q especificar bien los atrivutos
-                //Esto seria CON base de datos
-                //=======HARCODEADO===========
-                $conn = mysqli_connect("localhost", "root", "", "db_pokedex");
-                $sql = "SELECT * FROM pokemon";
-                $result = $conn->query($sql);
-                //
+                include_once("./modelos/Conexion.clase.php");
+                $conn = new Conection();
+                $result = $conn->ejecutarConsulta("SELECT * FROM pokemon");
                 while ($row = $result->fetch_assoc()) {
                 echo '<tr style="text-align-last: center;">
                     <th scope="row">' . $row['id'] . '</th>
@@ -66,22 +61,11 @@
                     <td>' . $row['nombre'] . '</td>
                     <td>' . $row['tipo'] . '</td>
                     <td>' . $row['numero'] . '</td>
-                    <td><button type="submit" class="btn btn-warning">Modificar</button></td>
-                    <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                    <td><a class="btn btn-warning" href="editar.php?id=<?=$fila[0]?>">Editar</a></td>
+                    <td><a class="btn btn-danger" href="../controladores/Pokemon.controlador.php?a=elim&id=<?=$fila[0]?>" onclick="return confirm("¿Desea eliminar?")">Eliminar</a></td>
                 </tr>';
                 }$conn->close();
-                ?>
-                <!-- <tr style="text-align-last: center;">
-                    <th scope="row">1</th>
-                    <td>img</td>
-                    <td>noasd</td>
-                    <td>esto es prueba</td>
-                    <td>numerin</td>
-                    <td><button type="submit" class="btn btn-secondary">Modificar</button></td>
-                    <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
-                </tr> -->
-
-               
+                ?>           
                 </tbody>
         </table>
     </div>
