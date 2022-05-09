@@ -13,7 +13,7 @@
    </header>
 
    <form action="../controladores/Pokemon.controlador.php" method="POST">
-<label for="usuario"> Usuario:</label>
+    <label for="usuario"> Usuario:</label>
    <input type="text" name="usuario">
    <label for="password">Contraseña:</label>
    <input type="password" name="password">

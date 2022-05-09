@@ -4,7 +4,6 @@ require_once '../dao/Pokemon.dao.php';
 require_once '../pokemon/user.php';
 
 $login= login();
-
  if($login==true /*&& $login->getrole()=="admin"*/){ 
 
 	switch ($_GET['a']) {

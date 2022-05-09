@@ -24,8 +24,7 @@ CREATE TABLE `db_pokedex` . `usuario` (
 
 --INSERTAMOS DATOS A TABLA USUARIO
 INSERT INTO `usuario` (`id`, `name`, `password`, `role`) VALUES
-(1, 'alguien', 'alguien',  'usuario'),
-(2, 'admin', 'admin', 'ADMIN');
+(1, 'juli', '1234',  'ADMIN'),
 
 --AGREGAMOS PKS
 ALTER TABLE `pokemon`
