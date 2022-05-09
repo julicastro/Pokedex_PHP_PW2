@@ -1,6 +1,6 @@
 <div class='w3-container w3-content w3-center w3-padding-64' /*style='max-width:800px'*/ id='band'>
     <h2 class='w3-wide'>Pokemones</h2>
-    <table class="table table-dark table-striped pokemon-table">
+    <table class="table table-striped table-hover">
         <thead>
         <tr>
             <th scope="col">ID</th>
@@ -28,8 +28,8 @@
             <td>' . $row['nombre'] . '</td>
             <td>' . $row['tipo'] . '</td>
             <td>' . $row['numero'] . '</td>
-            <td><button type="submit" class="btn btn-outline-light">Modificar</button></td>
-            <td><button type="submit" class="btn btn-outline-light">Eliminar</button></td>
+            <td><button type="submit" class="btn btn-warning">Modificar</button></td>
+            <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
         </tr>';
         }$conn->close();
         ?>

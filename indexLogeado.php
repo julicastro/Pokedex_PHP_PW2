@@ -1,10 +1,16 @@
 <?php
 
+<<<<<<< HEAD:pokedex-inicial/indexLogeado.php
 // include_once('helper/database.php');
 include_once("config/Configuration.php");
 $configuration = new Configuration();
 
 // conectarAMySQL();
+=======
+include_once("config/Configuration.php");
+$configuration = new Configuration();
+
+>>>>>>> 7cfa98cedccb1c00568b09bd340e335bb78e5cb9:indexLogeado.php
 $configuration->getDatabase();
 
 
