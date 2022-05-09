@@ -13,7 +13,7 @@
     <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
 </head>
 
-<body style="background: #d2c575;font-family: cursive;">
+<body style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
     <header class="container-fluid row align-items-center my-3">
         <div class="col-md-2 text-center">
             <img src="../img/pokebolaPNG.png" alt="Logo" width="50px">

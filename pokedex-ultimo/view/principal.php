@@ -16,14 +16,22 @@
 <body style="background: #d2c575;font-family: cursive;">
     
     <header class="container-fluid row align-items-center my-3">
-        <div class="col-md-2 text-center">
+        <div class="col-md-3 text-center">
             <img src="../img/pokebolaPNG.png" alt="Logo" width="50px">
         </div>
-        <div class="col-md-8 text-center">
+        <div class="col-md-6 text-center">
             <h1 style="font-family: monospace;">Pokedex-Adm</h1>
         </div>
-        <div class="col-md-2 text-end" style="color: white;">
-            <h4 style="font-family: monospace;">Usuario ADMIN</h4>
+        <div class="col-md-3 text-end" style="color: white;">
+            <form class="d-flex flex-nowrap" action="controladores/Pokemon.controlador.php" method="POST">
+            
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="usuario" value="">
+                   
+            
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="">
+            
+                    <button type="submit" class="btn btn-dark">Entrar</button>
+            </form>
         </div>
     </header>
     <form action="" method="post">
