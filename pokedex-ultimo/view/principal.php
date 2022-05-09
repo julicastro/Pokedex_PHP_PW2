@@ -50,7 +50,28 @@
                 </tr>
             </thead>
             <thead>
-                <tr style="text-align-last: center;">
+                <?php
+
+                //Hay q especificar bien los atrivutos
+                //Esto seria CON base de datos
+                //=======HARCODEADO===========
+                $conn = mysqli_connect("localhost", "root", "", "db_pokedex");
+                $sql = "SELECT * FROM pokemon";
+                $result = $conn->query($sql);
+                //
+                while ($row = $result->fetch_assoc()) {
+                echo '<tr style="text-align-last: center;">
+                    <th scope="row">' . $row['id'] . '</th>
+                    <td>' . $row['imagen'] . '</td>
+                    <td>' . $row['nombre'] . '</td>
+                    <td>' . $row['tipo'] . '</td>
+                    <td>' . $row['numero'] . '</td>
+                    <td><button type="submit" class="btn btn-warning">Modificar</button></td>
+                    <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                </tr>';
+                }$conn->close();
+                ?>
+                <!-- <tr style="text-align-last: center;">
                     <th scope="row">1</th>
                     <td>img</td>
                     <td>noasd</td>
@@ -58,7 +79,9 @@
                     <td>numerin</td>
                     <td><button type="submit" class="btn btn-secondary">Modificar</button></td>
                     <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
-                </tr>
+                </tr> -->
+
+               
                 </tbody>
         </table>
     </div>

@@ -17,7 +17,7 @@
         //Hay q especificar bien los atrivutos
         //Esto seria CON base de datos
         //=======HARCODEADO===========
-        $conn = mysqli_connect("localhost", "root", "root", "db_pokedex");
+        $conn = mysqli_connect("localhost", "root", "", "db_pokedex");
         $sql = "SELECT * FROM pokemon";
         $result = $conn->query($sql);
         //
