@@ -33,7 +33,7 @@ $pokemon = PokemonDAO::buscarPorId($_GET['id']);
         </div>
     </header>
 	<section class="container row ">
-	<form action="../controladores/Pokemon.controlador.php?a=edit" method="POST">
+	<form action="controladores/Pokemon.controlador.php?a=edit" method="POST">
 		<input type="hidden" name="id" value="<?= $pokemon[0] ?>" />
 		<div>
 			<label for="nombre">Nombre: </label>
