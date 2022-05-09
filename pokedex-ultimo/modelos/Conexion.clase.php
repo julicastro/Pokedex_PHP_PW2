@@ -9,7 +9,7 @@ class Conexion {
 	public function __construct () {
 		$this->servidor = 'localhost';
 		$this->usuario = 'root';
-		$this->clave = 'root';
+		$this->clave = '';
 		$this->base = 'db_pokedex';
 
 		$this->conexion = new mysqli($this->servidor, $this->usuario, $this->clave, $this->base);

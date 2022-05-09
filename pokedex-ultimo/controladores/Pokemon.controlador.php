@@ -1,10 +1,11 @@
 <?php
 require_once '../modelos/Pokemon.clase.php';
 require_once '../dao/Pokemon.dao.php';
+require_once '../pokemon/user.php';
 
+$login= login();
 
-
-// if($login==true && $user=="admin"){ 
+ if($login==true /*&& $login->getrole()=="admin"*/){ 
 
 	switch ($_GET['a']) {
 		case 'ingr':
@@ -32,9 +33,10 @@ require_once '../dao/Pokemon.dao.php';
 	}
 	
 	header('Location: ../pokemon/');
+	
 
-/*
+
 }else {
-	header('Login: ../login');
+	header('Location: ../pokemon/login.php');
 }
-*/
+
