@@ -13,7 +13,7 @@ require_once '../templates/nav.php';
 showHead();
 ?>
 
-<body>
+<body style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
 
 	<?php
 	showNav("Lista de Pokemones");
@@ -54,6 +54,20 @@ showHead();
 			<a class="btn btn-primary w-50 mb-5" href="ingresar.php">Ingresar nuevo</a>
 		</div>
 	</div>
+
+<!-- ============================================ -->
+<div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+								left: -100px;bottom: -100px;z-index: -1;">.
+</div>
+<div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+								right: -100px;bottom: -100px;z-index: -1;">.
+</div>
+<div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+								right: -150px;top: -120px;z-index: -1;">.
+</div>
+<div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+								left: -150px;top: -120px;z-index: -1;">.
+</div>
 
 </body>
 
