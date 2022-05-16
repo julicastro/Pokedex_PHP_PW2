@@ -16,7 +16,7 @@ showHead();
 	<?php
 	showNav("Editar Pokemon");
 	?>
-	<form action="../controladores/Pokemon.controlador.php?a=edit" method="POST">
+	<form action="./controladores/Pokemon.controlador.php?a=edit" method="POST">
 		<div class="container">
 			<input type="hidden" name="id" value="<?= $pokemon[0] ?>" />
 			<div class="row mb-4">

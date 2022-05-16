@@ -1,3 +1,7 @@
+<?php
+include_once "../controladores/buscador.controlador.php";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -45,27 +49,10 @@
                     </div>
                 </div>
                 <div class="p-3" style="background: #ef4036;color:white; border-radius: 5%;">
-                    <p>Squirtle es un Pokémon de tipo agua introducido en la primera generación. Es uno de los Pokémon
-                        iniciales que pueden elegir los entrenadores que empiezan su aventura en la región Kanto, junto
-                        a Bulbasaur y Charmander, excepto en Pokémon Amarillo.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi aperiam provident illo debitis
-                        reprehenderit laborum dignissimos aliquam? Tempora, commodi consequatur, molestias fugiat
-                        blanditiis aliquam voluptatum sint aut debitis, minus accusamus at omnis eum asperiores odio
-                        soluta tenetur aliquid vitae officiis. Reprehenderit labore natus deserunt, aut dolore quisquam
-                        ea fuga suscipit nostrum adipisci. Possimus facilis consequatur inventore repellendus
-                        reprehenderit aut necessitatibus magnam adipisci ullam voluptatum, quos fugiat culpa saepe quasi
-                        debitis laudantium. Deserunt autem eum blanditiis totam quibusdam nemo mollitia consequatur
-                        doloremque rerum ducimus, perferendis ad, reprehenderit, inventore est eaque sequi voluptas quo
-                        tempore exercitationem. Ea incidunt eaque non laborum quaerat quod placeat, nulla sequi unde
-                        consequuntur error mollitia, maiores dicta recusandae maxime eos quidem veritatis molestias
-                        autem praesentium atque amet necessitatibus. Modi fuga, praesentium ipsam minus odit, laborum
-                        ipsum, perferendis aperiam facere odio voluptate iusto excepturi fugit corporis nisi voluptatum
-                        quas sequi blanditiis recusandae. Omnis ipsam tenetur a tempora accusamus numquam, autem amet
-                        incidunt itaque, consectetur eveniet labore aspernatur quia qui rerum, aliquam nisi nemo
-                        perspiciatis hic tempore? Architecto reiciendis dolorem, provident sapiente dolore sequi
-                        temporibus pariatur ducimus? Perferendis omnis excepturi est velit veritatis eum odio aut
-                        delectus facilis. Similique vero incidunt molestiae molestias, vitae obcaecati tempora quia
-                        assumenda ducimus.
+                    <p> <?php
+                        $encontrado->getDescripcion();
+                        
+                        ?>
 
                     </p>
                 </div>

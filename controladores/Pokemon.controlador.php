@@ -28,5 +28,20 @@ require_once '../dao/Pokemon.dao.php';
 	}
 	
 	header('Location: ../view/');
+
+	function mostrarPokemon(){
+    
+		$encontrado =  buscarPokemon ($_GET['buscado']);
+		if(!($encontrado)){
+		  header('Location: ../view/buscador.php');
+		} else{
+	  
+		  
+		  header('Location: ../view/index.php');
+	  
+		}
+	  
+	  
+	  }
 	
 
