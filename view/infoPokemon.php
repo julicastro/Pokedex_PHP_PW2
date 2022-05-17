@@ -1,5 +1,5 @@
 <?php
-include_once "../controladores/buscador.controlador.php";
+include_once "../controladores/Pokemon.controlador.php";
 ?>
 
 <!DOCTYPE html>

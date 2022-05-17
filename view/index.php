@@ -3,6 +3,7 @@
 require_once '../dao/Pokemon.dao.php';
 require_once '../templates/header.php';
 require_once '../templates/nav.php';
+require_once '../templates/buscador.php';
 
 
 ?>
@@ -13,10 +14,14 @@ require_once '../templates/nav.php';
 showHead();
 ?>
 
+
 <body style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
 
 	<?php
 	showNav("Lista de Pokemones");
+	?>
+	<?php
+	showSeach();
 	?>
 
 

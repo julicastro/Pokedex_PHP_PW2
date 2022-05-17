@@ -34,9 +34,10 @@ class PokemonDAO {
 		$con->ejecutarActualizacion("DELETE FROM pokemon WHERE Id = $id");
 		$con->cerrarConexion();
 	}
-	public static function buscarPokemon ($string) {
+//Lista los pokemons por lo que se pasa en buscador
+	public static function listarDatosFiltrado ($data) {
 		$con = new Conexion();
-		$cont = $con->ejecutarConsulta("SELECT * FROM pokemon WHERE id = $string or nombre= $string or tipo= $string");
+		$cont = $con->ejecutarConsulta("SELECT * FROM pokemon WHERE id = $data or nombre= $data or tipo= $data");
 		$con->cerrarConexion();
 		return $cont;
 	}

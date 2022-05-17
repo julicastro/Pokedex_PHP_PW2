@@ -13,7 +13,7 @@ require_once '../templates/nav.php';
 showHead();
 ?>
 
-<body>
+<body  style="background: #d2c575;font-family: cursive;">
 
     <header>
         <?php
@@ -59,6 +59,21 @@ showHead();
             </div>
         </div>
     </form>
+
+	  <!-- ============================================ -->
+    <div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+                                    left: -100px;bottom: -100px;z-index: -1;">.
+    </div>
+    <div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+                                    right: -100px;bottom: -100px;z-index: -1;">.
+    </div>
+    <div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+                                    right: -150px;top: -120px;z-index: -1;">.
+    </div>
+    <div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+                                    left: -150px;top: -120px;z-index: -1;">.
+    </div>
+
 
 </body>
 

@@ -12,11 +12,11 @@ $pokemon = PokemonDAO::buscarPorId($_GET['id']);
 showHead();
 ?>
 
-<body>
+<body  style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
 	<?php
 	showNav("Editar Pokemon");
 	?>
-	<form action="./controladores/Pokemon.controlador.php?a=edit" method="POST">
+	<form action="../controladores/Pokemon.controlador.php?a=edit" method="POST">
 		<div class="container">
 			<input type="hidden" name="id" value="<?= $pokemon[0] ?>" />
 			<div class="row mb-4">
@@ -56,6 +56,19 @@ showHead();
 			</div>
 		</div>
 	</form>
+	<!-- ============================================ -->
+<div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+								left: -100px;bottom: -100px;z-index: -1;">.
+</div>
+<div class="bg-danger " style=" position: fixed;border-radius: 50%;padding: 100px;
+								right: -100px;bottom: -100px;z-index: -1;">.
+</div>
+<div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+								right: -150px;top: -120px;z-index: -1;">.
+</div>
+<div class="bg-dark " style="   position: fixed;transform: rotate(45deg);;padding: 100px;
+								left: -150px;top: -120px;z-index: -1;">.
+</div>
 
 </body>
 

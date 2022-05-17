@@ -13,7 +13,7 @@ CREATE TABLE `db_pokedex`.`pokemon` (
                                         PRIMARY KEY (`id`));
 USE db_pokedex;
 -- INSERTAMOS DATOS A LA TABLA POKEMON
-INSERT INTO `pokemon` (`id`, `nombre`, `numero`, `tipo`, `imagen`, `descripcion`) VALUES
+INSERT INTO `pokemon` (`nombre`, `numero`, `tipo`, `imagen`, `descripcion`) VALUES
                                                                                       ('charmander', 1, 'fuego',  'charmander.png', 'Charmander es un Pokemon de tipo fuego muy interes'),
                                                                                       ('bulbasaur',  2,  'planta',  'bulbasaur.png', 'Increible'),
                                                                                       ('charmeleon', 3, 'fuego', 'charmeleon.png', 'Genial');
