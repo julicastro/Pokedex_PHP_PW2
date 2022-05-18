@@ -2,37 +2,26 @@
 <?php
 require_once '../modelos/Conexion.clase.php';
 
-class User {
-private $nombre;
-private $password;
-public function login ($nombre,$password){
-    $this->password=$password;
-    $this->nombre=$nombre;
-    $con=new Conexion();
-    $cont = $con->ejecutarConsulta("SELECT * FROM usuario WHERE name = '$nombre' AND password = '$password'");
-    if($cont==false)
-    {
-        header('Location: ../pokemon/login.php');
-    }else{
+session_start();
 
-    }
-    $con->cerrarConexion();
+$usuario = $_POST['usuario'];
+$password = $_POST['password'];
 
-    return $cont;
-}
+$conn= new mysqli('localhost', 'root', '', 'db_pokedex');
 
 
+$sql = sprintf("SELECT * FROM usuario WHERE name = '$usuario' AND password = '$password'");
+$resultado = $conn->query($sql);
+$nr = mysqli_num_rows($resultado);
 
-public function getrole(){
-    $con= new Conexion();
-    $role = $con->ejecutarConsulta("SELECT role FROM usuario WHERE name = '$this->nombre' AND password = '$this->password'");
-    return $role[0];
-}
+if($nr == 0){ 
+header('location: index.php');
+} 
+else if($nr == 1){ 
+header('location: usuario.php');
+} 
 
-
-}
-
-
+?>
 
 
 

@@ -6,6 +6,24 @@ class Conexion {
 	private $base;
 	private $conexion;
 
+function dbConnect (){
+ 	$conn =	null;
+ 	$servidor = 'localhost';
+ 	$base = 	'db_pokedex';
+ 	$usuario = 'root';
+ 	$clave = 	'';
+	try {
+	   	$conn = new PDO('mysql:servidor='.$servidor.';db_pokedex='.$base, $usuario, $clave);
+
+	}
+	catch (PDOException $e) {
+		echo '<p>Error al conectar a la base de datos</p>';
+	    exit;
+	}
+	return $conn;
+ }
+
+
 	public function __construct () {
 		$this->servidor = 'localhost';
 		$this->usuario = 'root';
@@ -14,6 +32,7 @@ class Conexion {
 
 		$this->conexion = new mysqli($this->servidor, $this->usuario, $this->clave, $this->base);
 	}
+
 
 	public function ejecutarConsulta ($sql) {
 		$contenedor = $this->conexion->query($sql);
@@ -27,4 +46,5 @@ class Conexion {
 	public function cerrarConexion () {
 		$this->conexion->close();
 	}
+
 }
