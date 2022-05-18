@@ -25,6 +25,9 @@ require_once '../dao/Pokemon.dao.php';
 		case 'elim':
 			PokemonDAO::eliminarPorId($_GET['id']);
 			break;
+        case 'filter':
+            PokemonDAO::listarDatosFiltrado($_GET['buscador']);
+            break;
 	}
 	
 	

@@ -6,7 +6,7 @@ $pokemon = PokemonDAO::buscarPorId($_GET['id']);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <?php
 showHead();

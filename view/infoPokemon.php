@@ -1,5 +1,6 @@
 <?php
 include_once "../controladores/Pokemon.controlador.php";
+require_once '../dao/Pokemon.dao.php';
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +50,7 @@ include_once "../controladores/Pokemon.controlador.php";
                     </div>
                 </div>
                 <div class="p-3" style="background: #ef4036;color:white; border-radius: 5%;">
-                    <p> <?php
-                        $encontrado->getDescripcion();
-                        
-                        ?>
-
+                    <p require value="<?= $pokemon[5] ?>">
                     </p>
                 </div>
 

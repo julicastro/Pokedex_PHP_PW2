@@ -45,7 +45,7 @@ showHead();
 				<?php foreach (PokemonDAO::listarDatos() as $fila) { ?>
 					<tr>
 						<td><?= $fila[0] ?></td>
-						<td><?= $fila[1] ?></td>
+						<td><a href="infoPokemon.php?id=<?= $fila[0]?>"><?= $fila[1] ?></a></td>
 						<td><?= $fila[2] ?></td>
 						<td><?= $fila[3] ?></td>
 						<td><img style="width: 100px;" src="<?php echo($fila[4]) ?>" alt="imagen"></td>

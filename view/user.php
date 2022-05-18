@@ -1,6 +1,5 @@
 
 <?php
-require_once '../modelos/Conexion.clase.php';
 
 session_start();
 

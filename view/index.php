@@ -8,7 +8,7 @@ require_once '../templates/buscador.php';
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <?php
 showHead();
@@ -21,7 +21,7 @@ showHead();
         <button class="btn btn-outline-success" type="submit">Ingresar</button>
         </form>
     </div>
-</boby>
+</body>
 <body style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
 
 
@@ -49,7 +49,7 @@ showHead();
 				<?php foreach (PokemonDAO::listarDatos() as $fila) { ?>
 					<tr>
 						<td><?= $fila[0] ?></td>
-						<td><?= $fila[1] ?></td>
+                        <td><a href="infoPokemon.php?id=<?= $fila[0]?>"><?= $fila[1] ?></a></td>
 						<td><?= $fila[2] ?></td>
 						<td><?= $fila[3] ?></td>
 						<td><img style="width: 100px;" src="<?php echo($fila[4]) ?>" alt="imagen"></td>
