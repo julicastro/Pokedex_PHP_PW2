@@ -18,7 +18,8 @@ require_once '../dao/Pokemon.dao.php';
 			$r->setNombre($_POST['nombre']);
 			$r->setNumero($_POST['numero']);
 			$r->setTipo($_POST['tipo']);
-			$r->setImagen($_POST['imagen']);
+            //Para imagenes se usa el $_FILES[]
+			$r->setImagen($_FILES['imagen']['name']);
 			$r->setDescripcion($_POST['descripcion']);
 			PokemonDAO::editarDato($r);
 			break;

@@ -51,6 +51,7 @@ showHead();
 						<td><?= $fila[0] ?></td>
                         <td><a href="infoPokemon.php?id=<?= $fila[0]?>"><?= $fila[1] ?></a></td>
 						<td><?= $fila[2] ?></td>
+        <!--Al ser Tipo un JOIN con la tabla de pokemon, hay q crear un metodo que de el nombre en la tabla TIPO y no en la tabla POKEMON-->
 						<td><?= $fila[3] ?></td>
 						<td><img style="width: 100px;" src="<?php echo($fila[4]) ?>" alt="imagen"></td>
 						<td><?= $fila[5] ?></td>

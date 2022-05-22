@@ -1,22 +1,16 @@
 <?php
+require_once '../templates/header.php';
 include_once "../controladores/Pokemon.controlador.php";
 require_once '../dao/Pokemon.dao.php';
+$pokemon = PokemonDAO::buscarPorId($_GET['id']);
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <!-- Google Icon -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet">
-    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
-</head>
+<?php
+showHead();
+?>
 
 <body style="background: #d2c575;font-family: cursive;">
     <header class="container-fluid row align-items-center my-3">
@@ -37,19 +31,23 @@ require_once '../dao/Pokemon.dao.php';
     <section class="container-fluid my-5" style="font-family: cursive ;">
         <div class="row align-items-center">
             <div class="col-md-4 m-3 align-self-start">
-                <!-- El src es probando -->
+                <!-- Img del pokemon -->
                 <img class="img-fluid bg-dark p-2 bg-opacity-50 rounded-3"
-                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="Imagen Pokemon">
+                    src="<?= $pokemon[4]?>" alt="Imagen Pokemon">
             </div>
             <div class="col">
                 <div class="d-flex my-3 align-items-center bg-dark p-2" style="color: white;border-radius: 100px;">
-                    <img class="img-thumbnail border-0 mx-3 bg-transparent" src="./../img/pokebolaPNG.png" alt="imagen de Tipo" width="120px">
+                    <!--Logo de tipo-->
+                    <img class="img-thumbnail border-0 mx-3 bg-transparent" src="<?= $pokemon[3] ?>" alt="imagen de Tipo" width="120px">
                     <div>
-                        <h3>N° 7</h3>
-                        <h2> Squirtle</h2>
+                        <!--Numero-->
+                        <h3>N° <?= $pokemon[2] ?></h3>
+                        <!--Nombre-->
+                        <h2> <?= $pokemon[1] ?></h2>
                     </div>
                 </div>
                 <div class="p-3" style="background: #ef4036;color:white; border-radius: 5%;">
+                    <!--Descripcion-->
                     <p require value="<?= $pokemon[5] ?>">
                     </p>
                 </div>
