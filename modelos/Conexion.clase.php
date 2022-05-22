@@ -27,7 +27,7 @@ function dbConnect (){
 	public function __construct () {
 		$this->servidor = 'localhost';
 		$this->usuario = 'root';
-		$this->clave = '';
+		$this->clave = 'root';
 		$this->base = 'db_pokedex';
 
 		$this->conexion = new mysqli($this->servidor, $this->usuario, $this->clave, $this->base);

@@ -35,9 +35,9 @@ class PokemonDAO {
 		$con->cerrarConexion();
 	}
 //Lista los pokemons por lo que se pasa en buscador
-	public static function listarDatosFiltrado ($id) {
+	public static function listarDatosFiltrado ($q) {
 		$con = new Conexion();
-		$cont = $con->ejecutarConsulta("SELECT * FROM pokemon WHERE Id = $id");
+		$cont = $con->ejecutarConsulta("SELECT * FROM pokemon WHERE (Id LIKE '%$q%' OR nombre LIKE '%$q%' OR tipo LIKE '%$q%' OR numero LIKE '%$q%')");
 		$con->cerrarConexion();
 		return $cont;
 	}
