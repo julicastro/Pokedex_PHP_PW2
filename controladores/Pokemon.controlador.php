@@ -2,6 +2,9 @@
 require_once '../modelos/Pokemon.clase.php';
 require_once '../dao/Pokemon.dao.php';
 
+
+
+
 	switch ($_GET['a']) {
 		case 'ingr':
 			$r = new Pokemon();
