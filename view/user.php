@@ -1,6 +1,6 @@
 
 <?php
-$adminLogeado = false;
+//$adminLogeado = false;
 
 $usuario = $_POST['usuario'];
 $password = $_POST['password'];
@@ -14,7 +14,7 @@ $nr = mysqli_num_rows($resultado);
 
 if ($nr == 0) {
     header('location: index.php');
-    $adminLogeado = false;
+//    $adminLogeado = false;
 } else if ($nr == 1) {
     header('location: usuario.php');
     $adminLogeado = true;

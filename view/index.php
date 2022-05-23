@@ -3,7 +3,7 @@
 require_once '../dao/Pokemon.dao.php';
 require_once '../templates/header.php';
 require_once '../templates/nav.php';
-require_once 'user.php';
+//require_once 'user.php';
 
 
 ?>
@@ -12,7 +12,7 @@ require_once 'user.php';
 
 <?php
 showHead();
-echo $adminLogeado;
+//echo $adminLogeado;
 ?>
 
 
