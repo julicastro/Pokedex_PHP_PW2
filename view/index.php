@@ -3,6 +3,7 @@
 require_once '../dao/Pokemon.dao.php';
 require_once '../templates/header.php';
 require_once '../templates/nav.php';
+require_once 'user.php';
 
 
 ?>
@@ -11,11 +12,14 @@ require_once '../templates/nav.php';
 
 <?php
 showHead();
+echo $adminLogeado;
 ?>
 
 
 <body style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;">
 
+
+<!--Login-->
 	<div style="background: #d2c575;font-family: cursive;" style="text-align: -webkit-center;" class="container my-5">
 		<div class="container-fluid">
 			<form action="user.php" class="d-flex" method="post" enctype="multipart-form-data">
@@ -25,6 +29,14 @@ showHead();
 			</form>
 		</div>
 	</div>
+<!--Buscador-->
+<form action="buscar.php" method="GET" class="my-5">
+    <div class="form-group d-flex w-50 m-auto">
+        <input type="text" name="busqueda" id="busqueda" placeholder="Buscar" class="form-control">
+        <input type="submit" value="Buscar" class="btn btn-primary">
+    </div>
+
+</form>
 
 	<div style="width: 90%" class="m-auto">
 

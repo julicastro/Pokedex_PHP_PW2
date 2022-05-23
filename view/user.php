@@ -1,16 +1,11 @@
 
 <?php
-
-    $adminLogeado = false;
-
-    
-
-session_start();
+$adminLogeado = false;
 
 $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
-$conn = new mysqli('localhost', 'root', 'root', 'db_pokedex');
+$conn = new mysqli('localhost', 'root', '', 'db_pokedex');
 
 
 $sql = sprintf("SELECT * FROM usuario WHERE name = '$usuario' AND password = '$password'");
@@ -25,7 +20,7 @@ if ($nr == 0) {
     $adminLogeado = true;
 }
 
-?>
+
 
 
 

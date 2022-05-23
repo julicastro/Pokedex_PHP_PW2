@@ -1,9 +1,11 @@
 <?php
 require_once '../modelos/Pokemon.clase.php';
 require_once '../dao/Pokemon.dao.php';
-require_once '../view/user.php';
+include_once '../view/user.php';
 
-if ($adminLogeado == true) {
+echo  $adminLogeado;
+
+//if ($adminLogeado == true) {
 	switch ($_GET['a']) {
 		case 'ingr':
 			$r = new Pokemon();
@@ -33,6 +35,7 @@ if ($adminLogeado == true) {
 			break;
 	}
 	header('Location: ../view/usuario.php');
-}else {
+/*}else {
 	header('Location: ../view/');
 }
+*/
